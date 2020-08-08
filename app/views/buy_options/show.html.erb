@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @buy_option.material_id %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @buy_option.company_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @buy_option.price %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @buy_option.date %>
+</p>
+
+<%= link_to 'Edit', edit_buy_option_path(@buy_option) %> |
+<%= link_to 'Back', buy_options_path %>

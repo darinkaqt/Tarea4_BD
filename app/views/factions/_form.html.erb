@@ -1,0 +1,27 @@
+<%= form_with(model: faction, local: true) do |form| %>
+  <% if faction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(faction.errors.count, "error") %> prohibited this faction from being saved:</h2>
+
+      <ul>
+        <% faction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_faction %>
+    <%= form.text_field :name_faction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rebel? %>
+    <%= form.number_field :rebel? %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

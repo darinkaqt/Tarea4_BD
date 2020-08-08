@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Component Materials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Material</th>
+      <th>Quantity</th>
+      <th>Measure unit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @component_materials.each do |component_material| %>
+      <tr>
+        <td><%= component_material.component_id %></td>
+        <td><%= component_material.material_id %></td>
+        <td><%= component_material.quantity %></td>
+        <td><%= component_material.measure_unit %></td>
+        <td><%= link_to 'Show', component_material %></td>
+        <td><%= link_to 'Edit', edit_component_material_path(component_material) %></td>
+        <td><%= link_to 'Destroy', component_material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Component Material', new_component_material_path %>

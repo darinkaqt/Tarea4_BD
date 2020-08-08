@@ -1,0 +1,27 @@
+<%= form_with(model: machine_in_section, local: true) do |form| %>
+  <% if machine_in_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(machine_in_section.errors.count, "error") %> prohibited this machine_in_section from being saved:</h2>
+
+      <ul>
+        <% machine_in_section.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :machine_id %>
+    <%= form.text_field :machine_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :section_id %>
+    <%= form.text_field :section_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @machine_in_section.machine_id %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @machine_in_section.section_id %>
+</p>
+
+<%= link_to 'Edit', edit_machine_in_section_path(@machine_in_section) %> |
+<%= link_to 'Back', machine_in_sections_path %>

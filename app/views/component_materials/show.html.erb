@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Component:</strong>
+  <%= @component_material.component_id %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @component_material.material_id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @component_material.quantity %>
+</p>
+
+<p>
+  <strong>Measure unit:</strong>
+  <%= @component_material.measure_unit %>
+</p>
+
+<%= link_to 'Edit', edit_component_material_path(@component_material) %> |
+<%= link_to 'Back', component_materials_path %>

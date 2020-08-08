@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Component In Machines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Machine</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @component_in_machines.each do |component_in_machine| %>
+      <tr>
+        <td><%= component_in_machine.component_id %></td>
+        <td><%= component_in_machine.machine_id %></td>
+        <td><%= component_in_machine.quantity %></td>
+        <td><%= link_to 'Show', component_in_machine %></td>
+        <td><%= link_to 'Edit', edit_component_in_machine_path(component_in_machine) %></td>
+        <td><%= link_to 'Destroy', component_in_machine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Component In Machine', new_component_in_machine_path %>
